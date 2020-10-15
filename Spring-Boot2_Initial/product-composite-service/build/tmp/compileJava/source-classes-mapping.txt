@@ -1,0 +1,2 @@
+com/dvc/microservices/composite/product/ProductCompositeServiceApplication.java
+ com.dvc.microservices.composite.product.ProductCompositeServiceApplication
