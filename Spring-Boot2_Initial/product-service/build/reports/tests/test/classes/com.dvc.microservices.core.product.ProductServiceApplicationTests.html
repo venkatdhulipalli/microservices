@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">3</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.391s</div>
+<div class="counter">0.598s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,8 +78,18 @@
 </tr>
 </thead>
 <tr>
-<td class="success">contextLoads()</td>
-<td class="success">0.391s</td>
+<td class="success">getProductById</td>
+<td class="success">0.564s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getProductInvalidParameterNegativeValue</td>
+<td class="success">0.027s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getProductNotFound</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,26 +97,15 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>23:50:04.536 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-23:50:04.547 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-23:50:04.573 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.dvc.microservices.core.product.ProductServiceApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-23:50:04.587 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.dvc.microservices.core.product.ProductServiceApplicationTests], using SpringBootContextLoader
-23:50:04.592 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.dvc.microservices.core.product.ProductServiceApplicationTests]: class path resource [com/dvc/microservices/core/product/ProductServiceApplicationTests-context.xml] does not exist
-23:50:04.593 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.dvc.microservices.core.product.ProductServiceApplicationTests]: class path resource [com/dvc/microservices/core/product/ProductServiceApplicationTestsContext.groovy] does not exist
-23:50:04.593 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.dvc.microservices.core.product.ProductServiceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-23:50:04.595 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.dvc.microservices.core.product.ProductServiceApplicationTests]: ProductServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-23:50:04.628 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.dvc.microservices.core.product.ProductServiceApplicationTests]
-23:50:04.677 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/venkatdhulipalli/devprogs/Hands-On-Microservices-Spring-Boot-Cloud/microservices/product-service/build/classes/java/main/com/dvc/microservices/core/product/ProductServiceApplication.class]
-23:50:04.678 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.dvc.microservices.core.product.ProductServiceApplication for test class com.dvc.microservices.core.product.ProductServiceApplicationTests
-23:50:04.751 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.dvc.microservices.core.product.ProductServiceApplicationTests]: using defaults.
-23:50:04.754 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-23:50:04.763 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
-23:50:04.764 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
-23:50:04.765 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
-23:50:04.765 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1ec83eba, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4f41e214, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4b78496, org.springframework.test.context.support.DirtiesContextTestExecutionListener@729bef57, org.springframework.test.context.event.EventPublishingTestExecutionListener@2d793250, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6d6834a9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@55438ea6, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@780f320e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1c8074ed, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@30e1d6a8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@799e58ac]
-23:50:04.769 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@2f8144ee testClass = ProductServiceApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@28c95402 testClass = ProductServiceApplicationTests, locations = '{}', classes = '{class com.dvc.microservices.core.product.ProductServiceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@52e45562, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@28421f9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@67d5ef9f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@55f3eceb, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@3553c993, org.springframework.boot.test.context.SpringBootTestArgs@1], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
-23:50:04.778 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@2f8144ee testClass = ProductServiceApplicationTests, testInstance = com.dvc.microservices.core.product.ProductServiceApplicationTests@261888a, testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@28c95402 testClass = ProductServiceApplicationTests, locations = '{}', classes = '{class com.dvc.microservices.core.product.ProductServiceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@52e45562, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@28421f9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@67d5ef9f, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@55f3eceb, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@3553c993, org.springframework.boot.test.context.SpringBootTestArgs@1], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]].
-23:50:04.794 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+<pre>19:12:12.102 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.dvc.microservices.core.product.ProductServiceApplicationTests]
+19:12:12.103 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.dvc.microservices.core.product.ProductServiceApplicationTests]
+19:12:12.103 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.dvc.microservices.core.product.ProductServiceApplicationTests]
+19:12:12.104 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.dvc.microservices.core.product.ProductServiceApplicationTests]
+19:12:12.108 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@3662259d testClass = ProductServiceApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@760420ad testClass = ProductServiceApplicationTests, locations = '{}', classes = '{class com.dvc.microservices.core.product.ProductServiceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@166d35ea, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3ded6756, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7e45641, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2a8055da, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@31950af1, org.springframework.boot.test.context.SpringBootTestArgs@1], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; false]], class annotated with @DirtiesContext [false] with mode [null].
+19:12:12.109 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.dvc.microservices.core.product.ProductServiceApplicationTests]
+19:12:12.109 [Test worker] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.dvc.microservices.core.product.ProductServiceApplicationTests]
+19:12:12.112 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@3662259d testClass = ProductServiceApplicationTests, testInstance = com.dvc.microservices.core.product.ProductServiceApplicationTests@783aec95, testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@760420ad testClass = ProductServiceApplicationTests, locations = '{}', classes = '{class com.dvc.microservices.core.product.ProductServiceApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@166d35ea, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3ded6756, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7e45641, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@2a8055da, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@31950af1, org.springframework.boot.test.context.SpringBootTestArgs@1], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; false]]].
+19:12:12.128 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -116,11 +115,14 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::        (v2.3.4.RELEASE)
 
-2020-10-14 23:50:10.000  INFO 58864 --- [    Test worker] c.d.m.c.p.ProductServiceApplicationTests : Starting ProductServiceApplicationTests on VENKATs-MacBook-Pro.local with PID 58864 (started by venkatdhulipalli in /Users/venkatdhulipalli/devprogs/Hands-On-Microservices-Spring-Boot-Cloud/microservices/product-service)
-2020-10-14 23:50:10.001 DEBUG 58864 --- [    Test worker] c.d.m.c.p.ProductServiceApplicationTests : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
-2020-10-14 23:50:10.002  INFO 58864 --- [    Test worker] c.d.m.c.p.ProductServiceApplicationTests : No active profile set, falling back to default profiles: default
-2020-10-14 23:50:11.086  INFO 58864 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2020-10-14 23:50:11.401  INFO 58864 --- [    Test worker] c.d.m.c.p.ProductServiceApplicationTests : Started ProductServiceApplicationTests in 6.602 seconds (JVM running for 7.573)
+2020-10-16 19:12:17.342  INFO 98778 --- [    Test worker] c.d.m.c.p.ProductServiceApplicationTests : Starting ProductServiceApplicationTests on VENKATs-MacBook-Pro.local with PID 98778 (started by venkatdhulipalli in /Users/venkatdhulipalli/devprogs/Hands-On-Microservices-Spring-Boot-Cloud/microservices/product-service)
+2020-10-16 19:12:17.343 DEBUG 98778 --- [    Test worker] c.d.m.c.p.ProductServiceApplicationTests : Running with Spring Boot v2.3.4.RELEASE, Spring v5.2.9.RELEASE
+2020-10-16 19:12:17.344  INFO 98778 --- [    Test worker] c.d.m.c.p.ProductServiceApplicationTests : No active profile set, falling back to default profiles: default
+2020-10-16 19:12:18.441  INFO 98778 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-10-16 19:12:18.857  INFO 98778 --- [    Test worker] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port(s): 50556
+2020-10-16 19:12:18.873  INFO 98778 --- [    Test worker] c.d.m.c.p.ProductServiceApplicationTests : Started ProductServiceApplicationTests in 6.742 seconds (JVM running for 7.645)
+2020-10-16 19:12:19.486 DEBUG 98778 --- [ctor-http-nio-3] d.m.u.h.GlobalControllerExceptionHandler : Returning HTTP status: 422 UNPROCESSABLE_ENTITY for path: /product/-1, message: Invalid productId: -1
+2020-10-16 19:12:19.507 DEBUG 98778 --- [ctor-http-nio-3] d.m.u.h.GlobalControllerExceptionHandler : Returning HTTP status: 404 NOT_FOUND for path: /product/13, message: No product found for productId: 13
 </pre>
 </span>
 </div>
@@ -132,7 +134,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.6.1</a> at Oct. 14, 2020, 11:50:11 p.m.</p>
+<a href="http://www.gradle.org">Gradle 6.6.1</a> at Oct. 16, 2020, 7:12:21 p.m.</p>
 </div>
 </div>
 </body>
