@@ -1,0 +1,22 @@
+com/dvc/microservices/api/core/composite/ServiceAddresses.java
+ com.dvc.microservices.api.core.composite.ServiceAddresses
+com/dvc/microservices/api/core/composite/ReviewSummary.java
+ com.dvc.microservices.api.core.composite.ReviewSummary
+com/dvc/microservices/api/core/composite/ProductAggregate.java
+ com.dvc.microservices.api.core.composite.ProductAggregate
+com/dvc/microservices/api/core/product/Product.java
+ com.dvc.microservices.api.core.product.Product
+com/dvc/microservices/api/core/recommendation/RecommendationService.java
+ com.dvc.microservices.api.core.recommendation.RecommendationService
+com/dvc/microservices/api/core/review/Review.java
+ com.dvc.microservices.api.core.review.Review
+com/dvc/microservices/api/core/recommendation/Recommendation.java
+ com.dvc.microservices.api.core.recommendation.Recommendation
+com/dvc/microservices/api/core/composite/ProductCompositeService.java
+ com.dvc.microservices.api.core.composite.ProductCompositeService
+com/dvc/microservices/api/core/product/ProductService.java
+ com.dvc.microservices.api.core.product.ProductService
+com/dvc/microservices/api/core/composite/RecommendationSummary.java
+ com.dvc.microservices.api.core.composite.RecommendationSummary
+com/dvc/microservices/api/core/review/ReviewService.java
+ com.dvc.microservices.api.core.review.ReviewService
