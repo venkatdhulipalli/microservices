@@ -1,4 +1,4 @@
-# This repo delves deep into microservices core concepts, design patterns etc. using Spring Boot, Spring WebFlux, Spring cloud. There are four microservices
+# This repo delves deep into microservices core concepts, design patterns etc. using Spring Boot2, Spring WebFlux, Spring cloud, Docker. There are four microservices
 product-composite-service
 product-service
 recommendation-service
