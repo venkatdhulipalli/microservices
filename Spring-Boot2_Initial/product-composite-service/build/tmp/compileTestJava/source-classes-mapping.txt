@@ -1,0 +1,2 @@
+com/dvc/microservices/composite/product/ProductCompositeServiceApplicationTests.java
+ com.dvc.microservices.composite.product.ProductCompositeServiceApplicationTests

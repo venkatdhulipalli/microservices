@@ -1,0 +1,2 @@
+com/dvc/microservices/core/recommendation/RecommendationServiceApplicationTests.java
+ com.dvc.microservices.core.recommendation.RecommendationServiceApplicationTests
