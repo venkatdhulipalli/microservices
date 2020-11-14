@@ -11,4 +11,10 @@ Spring Boot 2.3.4
 Spring Webflux
 Log4j
 Gradle
+-----------------------------------------------
+Docker
+-----------------------------------------------
+Dockerize all four microservices by adding Docker file and new Spring profile
+Use Docker compose to build and start all four microservices
+Create Intergartion tests to start and stop microservices automatically
 
