@@ -1,0 +1,37 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'java'
+}
+
+group = 'com.dvc.microservices.core.product'
+version = '1.0.0-SNAPSHOT'
+sourceCompatibility = '15'
+
+repositories {
+	mavenCentral()
+	maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }
+}
+
+ext { mapstructVersion = "1.4.1.Final"}
+
+dependencies {
+	implementation project(':api')
+	implementation project(':util')
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation ("org.mapstruct:mapstruct:${mapstructVersion}")
+	implementation('org.springframework.boot:spring-boot-starter-data-mongodb')
+
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	testImplementation 'io.projectreactor:reactor-test'
+	testImplementation('de.flapdoodle.embed:de.flapdoodle.embed.mongo')
+
+	annotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
+	testAnnotationProcessor "org.mapstruct:mapstruct-processor:${mapstructVersion}"
+	compileOnly "org.mapstruct:mapstruct-processor:${mapstructVersion}"
+}
+
+test {
+	useJUnitPlatform()
+}
