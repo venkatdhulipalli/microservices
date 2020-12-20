@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
 import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
 import springfox.documentation.spring.web.plugins.Docket;
@@ -45,7 +46,7 @@ public class ProductCompositeServiceApplication {
 	public Docket apiDocumentation() {
 		return new Docket(SWAGGER_2)
 				.select()
-				.apis(basePackage("com.dvc.microservices.api.core.composite"))
+				.apis(RequestHandlerSelectors.any())
 				.paths(PathSelectors.any())
 				.build()
 				.globalResponseMessage(GET, emptyList())
