@@ -18,3 +18,4 @@ Dockerize all four microservices by adding Docker file and new Spring profile
 Use Docker compose to build and start all four microservices
 Create Intergartion tests to start and stop microservices automatically
 
+http://localhost:8080/swagger-ui/
